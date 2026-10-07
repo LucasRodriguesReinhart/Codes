@@ -1,0 +1,29 @@
+{
+  "_sobre": "V006 'O MINÉRIO MAIS RARO' com gameplay REAL. Use o minério raro de verdade e a chance real dele. O último take deve terminar no mesmo enquadramento do primeiro (loop).",
+  "lang": "pt", "fps": 30, "duration": 9.0,
+  "clips": [
+    { "_nota": "HERO: freecam orbitando o minério raro, sem HUD", "file": "footage/v006_01_hero.mkv", "in": 0.0, "t0": 0.0, "t1": 1.0, "zoom": [1.0, 1.08] },
+    { "_nota": "aproximação + primeiros golpes (HUD do jogo com HP visível)", "file": "footage/v006_02_mining.mkv", "in": 0.0, "t0": 1.0, "t1": 4.0 },
+    { "_nota": "golpes finais com HP baixo; zoom nos 50% e 10%", "file": "footage/v006_02_mining.mkv", "in": 3.0, "t0": 4.0, "t1": 6.0, "zoom": [[4.0, 1.2], [4.9, 1.35], [5.6, 1.5], [6.0, 1.1]] },
+    { "_nota": "QUEBRA + drop raro (impacto em 6.0s)", "file": "footage/v006_03_break.mkv", "in": 0.0, "t0": 6.0, "t1": 8.0, "speed": [[6.0, 0.3], [6.9, 0.3], [7.0, 1]] },
+    { "_nota": "volta ao enquadramento do HERO (minério renascido) para o loop", "file": "footage/v006_01_hero.mkv", "in": 0.0, "t0": 8.0, "t1": 9.0 }
+  ],
+  "fx": [ { "t": 1.0, "type": "cut" }, { "t": 4.0, "type": "cut" }, { "t": 4.9, "type": "cut" }, { "t": 5.6, "type": "cut" }, { "t": 6.0, "type": "impact" } ],
+  "layers": [
+    { "type": "text", "t0": 0.0, "t1": 0.95, "text": "O MINÉRIO MAIS", "y": 380, "size": 104, "anim": "none" },
+    { "type": "text", "t0": 0.0, "t1": 0.95, "text": "RARO DO JOGO", "y": 500, "size": 150, "fill": "rainbow", "anim": "none", "glow": "#9fe8ff" },
+    { "_nota": "use a chance REAL", "type": "badge", "t0": 0.0, "t1": 0.95, "text": "CHANCE: 0,0001%", "y": 650, "size": 52, "bg": ["#1f2b4a", "#0b1226"] },
+    { "type": "text", "t0": 6.35, "t1": 8.0, "text": "SECRETO!", "y": 470, "size": 190, "fill": "rainbow", "anim": "stamp", "glow": "#9fe8ff" },
+    { "type": "rays", "t0": 6.35, "t1": 8.0, "y": 900, "color": "170,235,255" },
+    { "type": "text", "t0": 7.2, "t1": 8.0, "text": "VOCÊ JÁ ACHOU UM?", "y": 1300, "size": 96, "fill": "yellow" },
+    { "type": "endcard", "t0": 8.0, "y": 1000, "dim": false },
+    { "type": "text", "t0": 8.85, "t1": 9.0, "text": "RARO DO JOGO", "y": 500, "size": 150, "fill": "rainbow", "anim": "none" }
+  ],
+  "sfx": [
+    { "t": 0, "name": "shimmer", "dur": 1.1 }, { "t": 0, "name": "drone", "dur": 1.2 }, { "t": 0.95, "name": "whoosh" },
+    { "t": 4.9, "name": "heartbeat" }, { "t": 5.35, "name": "heartbeat" }, { "t": 5.7, "name": "heartbeat" }, { "t": 5.2, "name": "riser", "dur": 0.8 },
+    { "t": 6.0, "name": "impact_huge" }, { "t": 6.0, "name": "sub_drop" }, { "t": 6.35, "name": "equip", "tier": "mythic" }, { "t": 6.4, "name": "stamp" },
+    { "t": 7.2, "name": "pop" }, { "t": 8.0, "name": "whoosh" }, { "t": 8.1, "name": "logo_hit" }
+  ],
+  "music": { "bpm": 150, "sections": [ { "t0": 0.0, "t1": 1.0, "mode": "tension" }, { "t0": 1.0, "t1": 3.0, "mode": "full" }, { "t0": 3.0, "t1": 5.6, "mode": "tension" }, { "t0": 6.0, "t1": 9.0, "mode": "drop" } ] }
+}
