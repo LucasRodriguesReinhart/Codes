@@ -1,0 +1,38 @@
+{
+  "_sobre": "V002 'COMUM vs MÍTICO' com gameplay REAL em tela dividida. Grave os dois testes no MESMO minério, MESMA câmera (freecam travada), começando no mesmo ponto. Ajuste os tempos dos timers para os tempos reais do jogo.",
+  "lang": "pt", "fps": 30, "duration": 15.0,
+  "clips": [
+    { "_nota": "0-4.6s: topo = Unit COMUM minerando; base = Unit MÍTICA minerando (mesmo minério)", "file": "footage/v002_common.mkv", "in": 0.0, "t0": 0.0, "t1": 4.6, "audio": 0.6,
+      "bottom": { "file": "footage/v002_mythic.mkv", "in": 0.0 } },
+    { "_nota": "4.6-8.85s: topo em TIME-LAPSE até a comum quebrar (ajuste speed para cobrir o teste inteiro)", "file": "footage/v002_common.mkv", "in": 3.6, "t0": 4.6, "t1": 8.85, "speed": [[4.6, 1], [5.2, 50], [8.2, 50], [8.6, 1]],
+      "bottom": { "file": "footage/v002_mythic.mkv", "in": 4.0, "speed": 0.5 } },
+    { "_nota": "8.85-13.4s: fundo para os resultados (qualquer take bonito das duas Units)", "file": "footage/v002_common.mkv", "in": 0.0, "t0": 8.85, "t1": 13.4, "audio": 0,
+      "bottom": { "file": "footage/v002_mythic.mkv", "in": 0.0 } },
+    { "_nota": "final: freecam com a Unit mítica", "file": "footage/v002_mythic.mkv", "in": 0.0, "t0": 13.4, "t1": 15.0, "audio": 0 }
+  ],
+  "fx": [ { "t": 1.0, "type": "flash", "amount": 0.35 }, { "t": 4.2, "type": "impact" }, { "t": 4.6, "type": "cut" }, { "t": 13.4, "type": "cut" } ],
+  "layers": [
+    { "type": "vs", "t0": 0.0, "t1": 13.4 },
+    { "type": "text", "t0": 0.0, "t1": 1.0, "text": "COMUM", "y": 840, "size": 150, "anim": "none" },
+    { "type": "text", "t0": 0.0, "t1": 1.0, "text": "MÍTICO", "y": 1090, "size": 165, "fill": "rainbow", "anim": "none" },
+    { "type": "text", "t0": 0.5, "t1": 1.0, "text": "MESMA PEDRA. DUAS UNITS.", "y": 1420, "size": 66, "fill": "yellow" },
+    { "type": "text", "t0": 1.0, "t1": 1.45, "text": "VAI!", "y": 960, "size": 230, "fill": "green" },
+    { "type": "badge", "t0": 1.0, "t1": 8.85, "text": "COMUM", "x": 200, "y": 250, "size": 50, "bg": ["#d9dde3", "#9aa3ad"] },
+    { "type": "badge", "t0": 1.0, "t1": 8.85, "text": "MÍTICO", "x": 200, "y": 1060, "size": 50, "bg": "rainbow" },
+    { "_nota": "timer topo: do GO até o tempo real da comum (to = segundos)", "type": "timer", "t0": 1.0, "t1": 8.85, "from": 0, "rate": 1, "to": 167.9, "x": 920, "y": 250, "align": "right" },
+    { "type": "timer", "t0": 1.0, "t1": 8.85, "from": 0, "rate": 1, "to": 3.2, "x": 920, "y": 1060, "align": "right" },
+    { "type": "badge", "t0": 4.6, "t1": 8.45, "text": ">> 50x", "y": 560, "size": 64, "bg": ["#ff5a5a", "#c4102a"] },
+    { "type": "timer", "t0": 9.0, "t1": 13.4, "value": 167.9, "y": 560, "size": 200 },
+    { "type": "timer", "t0": 9.25, "t1": 13.4, "value": 3.2, "y": 1400, "size": 200, "fill": "green" },
+    { "type": "text", "t0": 9.6, "t1": 11.6, "text": "52x MAIS RÁPIDO", "y": 960, "size": 120, "fill": "rainbow", "anim": "stamp" },
+    { "type": "text", "t0": 11.6, "t1": 13.4, "text": "QUAL VOCÊ USARIA?", "y": 935, "size": 104, "fill": "yellow" },
+    { "type": "endcard", "t0": 13.4 }
+  ],
+  "sfx": [
+    { "t": 0.12, "name": "vs" }, { "t": 0.0, "name": "drone", "dur": 1.1 }, { "t": 1.0, "name": "stamp" }, { "t": 1.0, "name": "ding" },
+    { "t": 4.2, "name": "impact_huge" }, { "t": 4.26, "name": "ding" }, { "t": 4.55, "name": "whoosh" }, { "t": 4.6, "name": "glitch", "dur": 0.2 },
+    { "t": 8.6, "name": "break" }, { "t": 8.66, "name": "ding" }, { "t": 8.85, "name": "whoosh" }, { "t": 9.6, "name": "stamp" }, { "t": 9.6, "name": "crit" },
+    { "t": 11.6, "name": "pop" }, { "t": 13.4, "name": "whoosh" }, { "t": 13.52, "name": "logo_hit" }
+  ],
+  "music": { "bpm": 150, "sections": [ { "t0": 0.0, "t1": 1.0, "mode": "tension" }, { "t0": 1.0, "t1": 4.2, "mode": "full" }, { "t0": 4.6, "t1": 8.6, "mode": "full" }, { "t0": 8.85, "t1": 13.4, "mode": "drop" }, { "t0": 13.4, "t1": 15.0, "mode": "outro" } ] }
+}

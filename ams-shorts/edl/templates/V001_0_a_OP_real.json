@@ -1,0 +1,46 @@
+{
+  "_sobre": "V001 '0 → OP' com gameplay REAL. Grave os takes listados em _nota de cada clip (OBS, 60fps), salve em footage/ com esses nomes, ajuste 'in' (segundo do arquivo onde a ação começa) e rode: node footage.mjs edl/templates/V001_0_a_OP_real.json",
+  "lang": "pt", "fps": 30, "duration": 12.0,
+  "clips": [
+    { "_nota": "HOOK: melhor picareta acertando o minério mais forte. Comece ~0.3s ANTES do impacto.", "file": "footage/v001_01_hook_op_hit.mkv", "in": 0.0, "t0": 0.0, "t1": 0.8, "speed": [[0, 1], [0.3, 1], [0.32, 0.35], [0.8, 0.35]], "zoom": [1.15, 1.05], "cropX": 0.5 },
+    { "_nota": "transição: os mesmos 0.2s seguintes do hook (vira efeito rewind)", "file": "footage/v001_01_hook_op_hit.mkv", "in": 0.6, "t0": 0.8, "t1": 1.0, "speed": 3 },
+    { "_nota": "STARTER: picareta inicial batendo 2x num minério inicial (dano baixo visível)", "file": "footage/v001_02_starter.mkv", "in": 0.0, "t0": 1.0, "t1": 2.4, "zoom": [1.0, 1.08], "audio": 0.9 },
+    { "_nota": "UPGRADE 1: equipar picareta rara (0.4s) e já minerar. Golpes perto de 3.2s e 3.6s se possível", "file": "footage/v001_03_upgrade1.mkv", "in": 0.0, "t0": 2.4, "t1": 4.0, "zoom": [1.1, 1.0] },
+    { "_nota": "UPGRADE 2: picareta épica em outra ilha", "file": "footage/v001_04_upgrade2.mkv", "in": 0.0, "t0": 4.0, "t1": 5.6, "zoom": [1.1, 1.0] },
+    { "_nota": "UPGRADE 3: picareta lendária quebrando em 1 golpe", "file": "footage/v001_05_upgrade3.mkv", "in": 0.0, "t0": 5.6, "t1": 7.2, "zoom": [1.1, 1.0] },
+    { "_nota": "OP: equipar a melhor picareta + carregar + GOLPE em 8.0s (impacto ~0.8s depois do 'in')", "file": "footage/v001_06_op.mkv", "in": 0.0, "t0": 7.2, "t1": 10.4, "speed": [[7.2, 1], [8.0, 1], [8.02, 0.3], [9.0, 0.3], [9.05, 1]], "zoom": [[7.2, 1.0], [7.95, 1.25], [8.05, 1.05], [10.4, 1.0]] },
+    { "_nota": "FINAL: freecam (Shift+P) orbitando o avatar com a picareta OP, sem HUD", "file": "footage/v001_07_orbit.mkv", "in": 0.0, "t0": 10.4, "t1": 12.0 }
+  ],
+  "fx": [
+    { "t": 0.3, "type": "impact" }, { "t": 0.8, "type": "rewind", "dur": 0.2 }, { "t": 1.0, "type": "cut" },
+    { "t": 2.4, "type": "flash", "amount": 0.4 }, { "t": 4.0, "type": "flash", "amount": 0.4 }, { "t": 5.6, "type": "flash", "amount": 0.4 },
+    { "t": 7.2, "type": "flash", "amount": 0.5 }, { "t": 8.0, "type": "impact" }, { "t": 10.4, "type": "cut" }
+  ],
+  "layers": [
+    { "type": "text", "t0": 0.0, "t1": 0.8, "text": "0 → OP", "y": 470, "size": 250, "fill": "rainbow", "anim": "none" },
+    { "type": "text", "t0": 1.04, "t1": 2.4, "text": "ESSA ERA MINHA PICARETA", "y": 600, "size": 78 },
+    { "type": "text", "t0": 1.24, "t1": 2.4, "text": "HÁ 10 MINUTOS", "y": 712, "size": 128, "fill": "yellow" },
+    { "type": "badge", "t0": 2.42, "t1": 2.85, "text": "RARO", "y": 1180, "size": 74, "bg": ["#6fc3ff", "#1f6fff"] },
+    { "type": "badge", "t0": 4.02, "t1": 4.45, "text": "ÉPICO", "y": 1180, "size": 74, "bg": ["#e08bff", "#8a2bff"] },
+    { "type": "badge", "t0": 5.62, "t1": 6.05, "text": "LENDÁRIO", "y": 1180, "size": 74, "bg": ["#ffe36b", "#ff9a1a"] },
+    { "type": "badge", "t0": 7.22, "t1": 7.65, "text": "MÍTICO", "y": 1180, "size": 92, "bg": "rainbow" },
+    { "type": "speedlines", "t0": 7.62, "t1": 8.0 },
+    { "type": "text", "t0": 7.66, "t1": 7.99, "text": "1 HIT?", "y": 620, "size": 190, "fill": "yellow" },
+    { "type": "text", "t0": 8.0, "t1": 8.9, "text": "1 HIT!", "y": 620, "size": 190, "fill": "rainbow", "anim": "stamp", "glow": "#ff4fd8" },
+    { "type": "endcard", "t0": 10.4 }
+  ],
+  "sfx": [
+    { "t": 0.0, "name": "whoosh_in" }, { "t": 0.3, "name": "impact_huge" }, { "t": 0.3, "name": "break_big" }, { "t": 0.8, "name": "rewind" },
+    { "t": 1.05, "name": "pop", "gain": 0.5 }, { "t": 1.25, "name": "pop", "gain": 0.6 },
+    { "t": 2.32, "name": "whoosh" }, { "t": 2.4, "name": "equip", "tier": "rare" },
+    { "t": 3.92, "name": "whoosh" }, { "t": 4.0, "name": "equip", "tier": "epic" },
+    { "t": 5.52, "name": "whoosh" }, { "t": 5.6, "name": "equip", "tier": "legendary" },
+    { "t": 7.12, "name": "whoosh" }, { "t": 7.2, "name": "equip", "tier": "mythic" },
+    { "t": 7.6, "name": "riser", "dur": 0.4 }, { "t": 7.62, "name": "charge", "dur": 0.38 },
+    { "t": 8.0, "name": "impact_huge" }, { "t": 8.0, "name": "sub_drop" }, { "t": 8.02, "name": "stamp" },
+    { "t": 10.4, "name": "whoosh", "gain": 0.6 }, { "t": 10.52, "name": "logo_hit" }
+  ],
+  "music": { "bpm": 150, "sections": [
+    { "t0": 0.0, "t1": 0.3, "mode": "full" }, { "t0": 1.0, "t1": 2.4, "mode": "muffled" }, { "t0": 2.4, "t1": 7.6, "mode": "full" },
+    { "t0": 8.0, "t1": 10.4, "mode": "drop" }, { "t0": 10.4, "t1": 12.0, "mode": "outro" } ] }
+}

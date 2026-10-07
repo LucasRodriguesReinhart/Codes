@@ -1,0 +1,16 @@
+{
+  "name": "ams-shorts",
+  "version": "1.0.0",
+  "description": "AMS short-form video engine: stylized 3D shorts + real-footage editor",
+  "scripts": {
+    "build": "node build.mjs",
+    "footage": "node footage.mjs"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.169.0",
+    "playwright": "^1.56.0"
+  },
+  "type": "module",
+  "private": true
+}
